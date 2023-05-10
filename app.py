@@ -126,7 +126,7 @@ def game_page(game_code):
 
         question_1 = st.radio("What is the English translation of 'Libellus de Medicinalibus Indorum Herbis'?",
                         options=["", "The Indigenous Herbal", "The Compendium of Materia Medica", "Little Book of the Medicinal Herbs of the Indians"])
-        question_2 = st.radio("What indigenous Mexican plant is used to treat cough and bronchitis?",
+        question_2 = st.radio("What indigenous Mexican plant was used to treat skin infections and promote wound healing?",
                             options=["", "Chamomile", "Cacao", "Eucalyptus"])
         question_3 = st.radio("What is the Nahuatl name for the plant that is used to make chocolate?",
                             options=["", "Xocolatl", "Tlilxochitl", "Mizquitl"])
