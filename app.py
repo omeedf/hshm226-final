@@ -14,7 +14,6 @@ locations = {
 # Define function for the game page
 def game_page(game_code):
     st.title('Primary Source Game')
-    st.header('Instructions: click on a pin to select a location and play the corresponding game by entering the game code.')
 
     # Astonomical Trivia Game
     if game_code == 'ZI123':
@@ -140,6 +139,8 @@ def game_page(game_code):
 
 # Streamlit app
 st.title('World Map: Primary Sources')
+st.subheader('Instructions: click on a pin to select a location and play the corresponding game by entering the game code below.')
+
 
 # Create folium map
 m = folium.Map(location=[30.76, -3.47], zoom_start=2,
