@@ -132,7 +132,7 @@ def game_page(game_code):
                             options=["", "Xocolatl", "Tlilxochitl", "Mizquitl"])
         
     
-        if question_1 == "Little Book of the Medicinal Herbs of the Indians" and question_2 == "Chamomile" and question_3 == "Xocolatl":
+        if question_1 == "Little Book of the Medicinal Herbs of the Indians" and question_2 == "Eucalyptus" and question_3 == "Xocolatl":
             st.success("Congratulations! You have answered all questions correctly.")
         elif question_1 != "" and (question_1 != "Little Book of the Medicinal Herbs of the Indians" or question_2 != "Chamomile" or question_3 != "Xocolatl"):
             st.error("Sorry, your answer is incorrect. Please try again.") 
