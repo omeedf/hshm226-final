@@ -85,29 +85,70 @@ def game_page(game_code: str) -> None:
 
     # Herbal Medicine Matching Game
     elif game_code == 'BG789':
+        num_correct = 0
         st.header("Herbal Medicine Matching")
+
         match_1 = st.selectbox("Which herb is used to treat coughs and colds?", options=[
                                "", "Ginseng", "Astragalus", "Licorice"])
+        if match_1 == "Licorice":
+            num_correct += 1
+            st.success("Correct!")
+        elif match_1 != "":
+            st.error("Incorrect. Hint: this herb is popular in candy today!")
+
         match_2 = st.selectbox("Which herb is used to improve energy and stamina?", options=[
                                "", "Ginseng", "Astragalus", "Licorice"])
+        if match_2 == "Ginseng":
+            num_correct += 1
+            st.success("Correct!")
+        elif match_2 != "":
+            st.error("Incorrect. Hint: this herb is sometimes called 'man-root' because it can be shaped like a person.")
+
         match_3 = st.selectbox("Which herb is known as the 'king of herbs' in Chinese medicine and is believed to boost the immune system and improve overall health?", options=[
                                "", "Reishi Mushroom", "Ginkgo Biloba", "Turmeric"])
+        if match_3 == "Reishi Mushroom":
+            num_correct += 1
+            st.success("Correct!")
+        elif match_3 != "":
+            st.error("Incorrect. Hint: this herb is neither an animal nor a plant!")
+        
         match_4 = st.selectbox("Which herb is commonly used in Chinese medicine to improve digestion and alleviate stomach discomfort?", options=[
                                "", "Fennel", "Ginger", "Cinnamon"])
+        if match_4 == "Ginger":
+            num_correct += 1
+            st.success("Correct!")
+        elif match_4 != "":
+            st.error("Incorrect. Hint: this herb is commonly used today in both Chinese and Japanese cuisine.")
+        
         match_5 = st.selectbox("Which herb is known for its calming properties and is used to treat anxiety, insomnia, and other stress-related conditions?",
                                options=["", "Valerian Root", "St. John's Wort", "Kava"])
+        if match_5 == "Valerian Root":
+            num_correct += 1
+            st.success("Correct!")
+        elif match_5 != "":
+            st.error("Incorrect. Hint: the name of this herb comes from the Latin word meaning 'to be strong' or 'to be in good health.'")
+
         match_6 = st.selectbox("Which herb is used to alleviate pain and inflammation, and is often used to treat arthritis and other joint conditions?", options=[
                                "", "Turmeric", "Boswellia", "Devil's Claw"])
+        if match_6 == "Turmeric":
+            num_correct += 1
+            st.success("Correct!")
+        elif match_6 != "":
+            st.error("Incorrect. Hint: this herb is popular in many Indian dishes and is commonly used in dyes.")
+
         match_7 = st.selectbox("Which herb is commonly used in Chinese medicine to improve circulation and treat menstrual cramps?", options=[
                                "", "Dong Quai", "Black Cohosh", "Chasteberry"])
+        if match_7 == "Dong Quai":
+            num_correct += 1
+            st.success("Correct!")
+        elif match_7 != "":
+            st.error("Incorrect. Hint: this herb is sometimes called the 'female ginseng' and has been used in China, Korea, and Japan for over 1000 years.")
 
-        if (match_1 == "Licorice" and match_2 == "Ginseng" and match_3 == "Reishi Mushroom" and match_4 == "Ginger" and match_5 == "Valerian Root" and match_6 == "Turmeric" and match_7 == "Dong Quai"):
-            st.success("Correct! You have matched all the herbs correctly.")
+        if num_correct >= 7:
+            st.success("Great job! You have matched all the herbs correctly. You would make a great doctor in 16th century China!")
             st.balloons()
             st.subheader("Summary of the primary source:")
             st.write("The Bencao Gangmu (Compendium of Materia Medica) by Li Shizhen (China, 16th century) is an encyclopedic work that documents the knowledge of traditional Chinese medicine, including the properties, effects, and applications of thousands of medicinal plants, minerals, and animals. It is regarded as one of the most comprehensive and authoritative texts on traditional Chinese medicine, and it has significantly influenced the development of medical science both within China and worldwide (Lin DY, Zhou CE, Lai XM, Yang SJ. [Research and analysis of data source--analysis of the items of medical plants in Xiandai Bencao Gangmu]. Zhongguo Zhong Yao Za Zhi. 2008 Sep;33(17):2094-6. Chinese).")
-        elif (match_1 != "" and match_2 != "" and match_3 != "" and match_4 != "" and match_5 != "" and match_6 != "" and match_7 != ""):
-            st.error("Incorrect. Hint: Some herbs are commonly used in cooking or have a distinct aroma or flavor, while others are often prepared in tea or supplement form.")
 
     # Mughal Empire Quiz
     elif game_code == 'AA012':
@@ -157,22 +198,33 @@ def game_page(game_code: str) -> None:
 
         question_1 = st.radio("What is the English translation of 'Libellus de Medicinalibus Indorum Herbis'?",
                               options=["", "The Indigenous Herbal", "The Compendium of Materia Medica", "Little Book of the Medicinal Herbs of the Indians"])
+        if question_1 == "Little Book of the Medicinal Herbs of the Indians":
+            num_correct += 1
+            st.success("Correct!")
+        elif question_1 != "":
+            st.error("Incorrect. Try again!")
+
         question_2 = st.radio("What indigenous Mexican plant was used to treat skin infections and promote wound healing?",
                               options=["", "Chamomile", "Cacao", "Eucalyptus"])
+        if question_2 == "Eucalyptus":
+            num_correct += 1
+            st.success("Correct!")
+        elif question_2 != "":
+            st.error("Incorrect. Try again!")
+
         question_3 = st.radio("What is the Nahuatl name for the plant that is used to make chocolate?",
                               options=["", "Xocolatl", "Tlilxochitl", "Mizquitl"])
-
-        if question_1 == "Little Book of the Medicinal Herbs of the Indians" and question_2 == "Eucalyptus" and question_3 == "Xocolatl":
+        if question_3 == "Xocolatl":
             num_correct += 1
-            st.success("Congratulations! You have answered all questions correctly.")
-        elif question_1 != "" and (question_1 != "Little Book of the Medicinal Herbs of the Indians" or question_2 != "Chamomile" or question_3 != "Xocolatl"):
-            st.error("Sorry, your answer is incorrect. Please try again.")
+            st.success("Correct!")
+        elif question_3 != "":
+            st.error("Incorrect. Try again!")
         
-        if num_correct >= 2:
+        if num_correct >= 4:
+            st.success("Congratulations! You have answered all questions correctly.")
             st.balloons()
             st.subheader("Summary of the primary source:")
             st.write("Libellus de Medicinalibus Indorum Herbis by Martin de la Cruz and translated by Juan Badiano (Mexico, 16th century) is an illustrated herbal manuscript that documents the medicinal properties and uses of various plants native to Mexico. The manuscript is based on the indigenous knowledge of the Aztec people and serves as a valuable resource for understanding their traditional medical practices and expertise in science (L. Y. Centeno-Betanzos, R. Reyes-Chilpa, N. B. Pigni, C. K. Jankowski, L. Torras-Claveria, J. Bastida, Chem. Biodiversity 2021, 18, e2000834).")
-
 
 # Streamlit app
 st.title('Global Science Explorer')
