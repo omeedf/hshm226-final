@@ -12,8 +12,6 @@ locations = {
 }
 
 # Define function for the game page
-
-
 def game_page(game_code: str) -> None:
     """Returns the game page based on the game code"""
     st.title('Primary Source Game')
@@ -62,7 +60,7 @@ def game_page(game_code: str) -> None:
         if num_correct >= 4:
             st.balloons()
             st.subheader("Summary of the primary source:")
-            st.write("The Compendium of Observations of the Movements of the Stars (Zij-i Ilkhani) by Nasir al-Din al-Tusi (Persia, 13th century)...")
+            st.write("Zij-i Ilkhani by Nasir al-Din al-Tusi (Persia, 13th century) is a book of astronomical tables which describes planetary movements. It contains tables for calculating not only positions of planets but also the names of stars. The data used to compile these tables was compiled over 12 years in the Maragha observatory. This data enabled al-Tusi to accurately predict many cosmological processes (J. A. Boyle (1963) 'The Longer Introduction to the Zij-i Ilkhani of Nasir ad-Din Tusi', Journal of Semitic Studies 8(2), pp.244-254).")
 
     # Timeline Challenge Game
     elif game_code == 'AN456':
@@ -81,7 +79,7 @@ def game_page(game_code: str) -> None:
             st.success("Correct! You have arranged the events in chronological order.")
             st.balloons()
             st.subheader("Summary of the primary source:")
-            st.write("The Almagestum Novum by Giovanni Battista Riccioli (Italy, 1651)...")
+            st.write("The Almagestum Novum by Giovanni Battista Riccioli (Italy, 1651) is a significant astronomical work that presents a comprehensive analysis of both the Copernican and Ptolemaic systems. It played a crucial role in shaping the scientific discourse of its time by providing a platform for comparing and contrasting these two influential models of the universe. Riccioli's work also included meticulous observations and experiments, helping to advance the understanding of celestial mechanics and laying the groundwork for future astronomical research. (Grant, Edward. (1994). Planets, Stars, and Orbs: The Medieval Cosmos, 1200-1687. Cambridge: Cambridge University Press. ISBN 9780521565097.)")
         elif event_order:
             st.error("Incorrect. Hint: Think about the sequence of astronomers' discoveries and publications.")
 
@@ -107,7 +105,7 @@ def game_page(game_code: str) -> None:
             st.success("Correct! You have matched all the herbs correctly.")
             st.balloons()
             st.subheader("Summary of the primary source:")
-            st.write("The Bencao Gangmu (Compendium of Materia Medica) by Li Shizhen (China, 16th century)...")
+            st.write("The Bencao Gangmu (Compendium of Materia Medica) by Li Shizhen (China, 16th century) is an encyclopedic work that documents the knowledge of traditional Chinese medicine, including the properties, effects, and applications of thousands of medicinal plants, minerals, and animals. It is regarded as one of the most comprehensive and authoritative texts on traditional Chinese medicine, and it has significantly influenced the development of medical science both within China and worldwide (Lin DY, Zhou CE, Lai XM, Yang SJ. [Research and analysis of data source--analysis of the items of medical plants in Xiandai Bencao Gangmu]. Zhongguo Zhong Yao Za Zhi. 2008 Sep;33(17):2094-6. Chinese).")
         elif (match_1 != "" and match_2 != "" and match_3 != "" and match_4 != "" and match_5 != "" and match_6 != "" and match_7 != ""):
             st.error("Incorrect. Hint: Some herbs are commonly used in cooking or have a distinct aroma or flavor, while others are often prepared in tea or supplement form.")
 
@@ -143,7 +141,7 @@ def game_page(game_code: str) -> None:
         if num_correct >= 3:
             st.balloons()
             st.subheader("Summary of the primary source:")
-            st.write("The Ain-i-Akbari (The Institutes of Akbar) by Abul Fazl (India, 16th century)...")
+            st.write("The Ain-i-Akbari (The Institutes of Akbar) by Abul Fazl (India, 16th century) is a detailed chronicle of culture and society during the reign of Emperor Akbar, one of the great Mughal rulers in India. The text covers a range of topics such as valuable information about the natural resources, flora, and fauna of the region, reflecting the scientific and intellectual curiosity in India at the time (http://www.columbia.edu/itc/mealac/pritchett/00litlinks/abulfazl/ain_zzcontents.html)")
 
 
     elif game_code == 'TP345':
@@ -173,11 +171,11 @@ def game_page(game_code: str) -> None:
         if num_correct >= 2:
             st.balloons()
             st.subheader("Summary of the primary source:")
-            st.write("Libellus de Medicinalibus Indorum Herbis by Martin de la Cruz and translated by Juan Badiano (Mexico, 16th century)...")
+            st.write("Libellus de Medicinalibus Indorum Herbis by Martin de la Cruz and translated by Juan Badiano (Mexico, 16th century) is an illustrated herbal manuscript that documents the medicinal properties and uses of various plants native to Mexico. The manuscript is based on the indigenous knowledge of the Aztec people and serves as a valuable resource for understanding their traditional medical practices and expertise in science (L. Y. Centeno-Betanzos, R. Reyes-Chilpa, N. B. Pigni, C. K. Jankowski, L. Torras-Claveria, J. Bastida, Chem. Biodiversity 2021, 18, e2000834).")
 
 
 # Streamlit app
-st.title('World Map: Primary Sources')
+st.title('Global Science Explorer')
 st.subheader('Instructions: click on a pin to select a location and play the corresponding game by entering the game code below.')
 
 
